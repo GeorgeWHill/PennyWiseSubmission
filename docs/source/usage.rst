@@ -3,14 +3,33 @@ Usage
 
 .. _installation:
 
-Installation
-------------
+1. **Clone the Repository**
 
-To use Lumache, first install it using pip:
+   First, clone this repository to your local machine using Git:
 
-.. code-block:: console
+   ```bash
+   git clone [<repository-url>](https://github.com/PennyWiseApp/PennyWise.git)
+   cd PennyWise
+   ```
 
-   (.venv) $ pip install lumache
+2. **Run npm Install**
+
+   Within the root directory of the project, run the following command:
+
+   ```bash
+   npm install
+   ```
+
+   This command does several things:
+
+   - Installs the Node.js dependencies listed in `package.json`.
+   - Automatically triggers the `postinstall` script, which sets up the Python virtual environment (`venv`) within the `backend/` directory and installs the Python dependencies specified in `backend/requirements.txt`.
+
+   **Note:** The `postinstall` script specifically does the following:
+
+   - Creates a Python virtual environment in `backend/venv`.
+   - Activates the virtual environment.
+   - Uses `pip` to install the Python packages listed in `backend/requirements.txt`.
 
 Creating recipes
 ----------------
