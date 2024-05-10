@@ -1,21 +1,27 @@
-Welcome to Lumache's documentation!
+Welcome to PennyWise's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**PennyWise** is a budgeting app which allows the user to set up purchase categories, priorities and limits
+to make tracking their expenses easier. Currently, the project exists as an MVP and can be extended to
+automatically assign categories a spending limit based on their relative priority.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+how to install the project and the :doc:`setup` section for additional information.
 
 .. note::
 
-   This project is under active development.
+   This project is a public clone of a private repository used for documentation purposes.
+   Project Members:
+      Omer Ibrahim
+      Ruben Tanner
+      Mufaro Mudiwa
+      George Hill
+      Shreya Jagannatha
 
 Contents
 --------
 
 .. toctree::
 
+   setup
    usage

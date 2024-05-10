@@ -35,7 +35,7 @@ Installation
 Registering/Logging In
 ----------------------
 
-To register or login you can use the respective ``register()`` and ``login()`` functions. These will use POST requests to check the login details against the database.
+To register or login the respective ``register()`` and ``login()`` functions are used. These will use POST requests to check the login details against the database.
 
 Assuming a successful login, the user's categories, transactions and budget will be loaded.
 
