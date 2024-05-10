@@ -1,7 +1,8 @@
 Usage
 =====
 
-.. _installation:
+Installation
+------------
 
 1. **Clone the Repository**
 
@@ -31,23 +32,29 @@ Usage
    - Activates the virtual environment.
    - Uses `pip` to install the Python packages listed in `backend/requirements.txt`.
 
-Creating recipes
-----------------
+Registering/Logging In
+----------------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To register or login you can use the respective ``register()`` and ``login()`` functions. These will use POST requests to check the login details against the database.
 
-.. autofunction:: lumache.get_random_ingredients
+Assuming a successful login, the user's categories, transactions and budget will be loaded.
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+Category Management
+-------------------
 
-.. autoexception:: lumache.InvalidKindError
+The ``addCategory()``, ``fetchCategories()`` and ``deleteCategory()`` functions handle the creation, reading and deletion of user-created categories.
 
-For example:
+After a category is added or deleted, ``fetchCategories()`` is called to update the UI and ensure that the changes are shown to the user.
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+Transaction Management
+----------------------
+
+Transaction management is handled the same as category management. Each time a transaction is added or deleted, a fetch function is called to present the changes to the user.
+
+Budget Creation
+---------------
+
+The ``calculateBudget()`` function is called on start to create the initial budget. Once this exists, ``fetchBudget()`` is called to update the information shown to the user each time a change is made to the budget.
+
+``fetchBudget()`` also updates any goals set with the ``setGoal()`` function which, like ``login()`` and ``register()`` uses POST requests sent to the server to update the data.
 
