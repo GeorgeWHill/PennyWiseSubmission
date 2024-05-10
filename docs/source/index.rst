@@ -11,12 +11,6 @@ how to install the project and the :doc:`setup` section for additional informati
 .. note::
 
    This project is a public clone of a private repository used for documentation purposes.
-   Project Members:
-      Omer Ibrahim
-      Ruben Tanner
-      Mufaro Mudiwa
-      George Hill
-      Shreya Jagannatha
 
 Contents
 --------
@@ -25,3 +19,10 @@ Contents
 
    setup
    usage
+
+Project Members:
+   - Omer Ibrahim
+   - Ruben Tanner
+   - Mufaro Mudiwa
+   - George Hill
+   - Shreya Jagannatha
